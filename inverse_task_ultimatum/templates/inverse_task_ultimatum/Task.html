@@ -1,0 +1,157 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block content %}
+
+	<div class="panel panel-default">
+		<!-- Default panel contents -->		
+		<div class="panel-heading" align="left">
+		{% if player.id_in_group == 2 %} <!-- PLAYER A-->
+				If you want you can solve some slider for fun, when you are bored press the button next
+			{% else %}	<!-- PLAYER B-->
+				You can claim certain amount of points by exerting certain effort. The more effort you exert the more you claim,
+				then you will be asked to divide the 10 points between her/himself.
+				<br>Your paired participant (B) will be notified about your effort. 
+			{% endif %}
+		</div>
+
+		{% if player.id_in_group == 1 %} <!-- PLAYER A-->
+			<img src="{% static "inverse_task_ultimatum/effort_a.jpg" %}" width="250"/>
+		{% endif %}
+
+		<div class="panel-heading" align="center">
+			<p>Sliders</p>
+		</div>
+
+		<!-- Table -->
+		<table class="table">
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider1 with label=player.correct_slider1 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider2 with label=player.correct_slider2 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider3 with label=player.correct_slider3 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider4 with label=player.correct_slider4 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider5 with label=player.correct_slider5 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider6 with label=player.correct_slider6 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider7 with label=player.correct_slider7 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider8 with label=player.correct_slider8 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider9 with label=player.correct_slider9 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider10 with label=player.correct_slider10 %} 
+		 	</td>
+		 </tr>
+
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider11 with label=player.correct_slider11 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider12 with label=player.correct_slider12 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider13 with label=player.correct_slider13 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider14 with label=player.correct_slider14 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider15 with label=player.correct_slider15 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider16 with label=player.correct_slider16 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider17 with label=player.correct_slider17 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider18 with label=player.correct_slider18 %} 
+		 	</td>
+		 </tr>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield player.slider19 with label=player.correct_slider19 %} 
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider20 with label=player.correct_slider20 %} 
+		 	</td>
+		 </tr>
+         <tr>
+		 	<td align="left">
+		 		{% formfield player.slider21 with label=player.correct_slider21 %}
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider22 with label=player.correct_slider22 %}
+		 	</td>
+		 </tr>
+         <tr>
+		 	<td align="left">
+		 		{% formfield player.slider23 with label=player.correct_slider23 %}
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider24 with label=player.correct_slider24 %}
+		 	</td>
+		 </tr>
+         <tr>
+		 	<td align="left">
+		 		{% formfield player.slider25 with label=player.correct_slider25 %}
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider26 with label=player.correct_slider26 %}
+		 	</td>
+		 </tr>
+            <tr>
+		 	<td align="left">
+		 		{% formfield player.slider27 with label=player.correct_slider27 %}
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider28 with label=player.correct_slider28 %}
+		 	</td>
+		 </tr>
+         <tr>
+		 	<td align="left">
+		 		{% formfield player.slider29 with label=player.correct_slider29 %}
+		 	</td>
+		 	<td align="left">
+		 		{% formfield player.slider30 with label=player.correct_slider30 %}
+		 	</td>
+		 </tr>
+		</table>
+	</div>
+
+	
+	<center>
+    {% next_button %}
+    </center>
+
+{% endblock %}

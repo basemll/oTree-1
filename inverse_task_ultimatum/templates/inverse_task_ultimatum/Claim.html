@@ -1,0 +1,25 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+{% block content %}
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading" align="center">You have done <mark>{{ group.task_correct }}</mark> sliders correctly. Which is your claim?</div>
+
+		<!-- Table -->
+		<table class="table">
+		 <tr>
+		 	<td align="center">
+		 		{% formfield group.receiver_claim with label="Your claim?" %} 
+		 	</td>
+		 </tr>		 
+		</table>
+	</div>
+	
+
+	<p>&nbsp;</p>
+
+    {% next_button %}
+
+{% endblock %}

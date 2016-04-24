@@ -1,0 +1,25 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+
+{% block content %}
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading" align="center"><strong>Payoff</strong></div>
+		<div class="panel-body">
+		Player (B) did correctly {{ group.task_correct }} sliders and claim {{ group.receiver_claim }}.
+
+		<br>Player (A) offer was {{ group.proposal }} and (B) {% if group.accept == 1 %} accepted it {% else %} refused it {% endif %}.
+
+		<br>Your payoff is <mark>{{ player.payoff }}</mark>		
+
+		</div>
+	<div>
+
+	
+	<p>&nbsp;</p>
+
+    {% next_button %}
+
+{% endblock %}

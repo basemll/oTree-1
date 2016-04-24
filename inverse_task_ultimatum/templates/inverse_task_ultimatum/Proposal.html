@@ -1,0 +1,27 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block content %}
+
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading" align="center">￼<strong>You are (A)</strong></div>
+		<!-- Table -->
+		<table class="table">
+		<tr>
+		 	<td align="left">
+		 		You are assigned to be (A).  You decide how much points to keep for yourself, and how much points to offer to your paired participant (B).
+		 		You have exerted <mark>{{group.task_correct}}</mark> sliders.
+		 	</td>
+		 <tr>
+		 	<td align="left">
+		 		{% formfield group.proposal with label="Your offer to (B)?" %} 
+		 	</td>		 	
+		 </tr>		 
+		</table>
+	</div>
+
+
+    {% next_button %}
+
+{% endblock %}

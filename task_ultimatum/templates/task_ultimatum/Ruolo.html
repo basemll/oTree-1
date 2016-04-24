@@ -1,0 +1,76 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+{% block content %}
+<div class="panel panel-default">
+	<div class="panel-heading" align="center">￼{% if player.id_in_group == 1 %}<strong>You are (A)</strong> {% else %}<strong>You are (B)</strong>{% endif %}</div>
+		<!-- Table -->
+		<table class="table">
+		<tr>
+		 	<td align="left">
+		 	{% if player.id_in_group == 1 %}
+		 		You are assigned to be (A). You decide how much points to keep for yourself and how much points to offer to your paired participant (B). Your paired participant (B) could claim certain points by exerting certain efforts.
+		 	{% else %}
+		 		You are assigned to be (B). First, you have an option to claim more points for yourself by exerting more effort. Second, your claim will be shown to participant (A). However, the claim is not binding for (A), who can still choose any of the available options. After (A) makes a decision about dividing the points, you decide whether to accept or reject (A)’s decision.
+		 	{% endif %}
+		 	</td> 
+		</table>
+		<table class="table">
+		<tr>
+			<td>The more effort (B) exerts the more (B) claim. See the following Table: 
+		</td>
+			<td></td>
+		</tr>
+		<tr>
+		 	<td align="left">
+		 		<strong>Effort (B) should do to claim more points</strong>
+			</td>
+		 	<td align="left">
+		 		<strong>(B) Can Claim</strong>
+			</td>
+		</tr>
+		
+		<tr>
+		 	<td align="left">
+		 		30 sliders
+			</td>
+		 	<td align="left">
+		 		1, 2, 4 or 5 points
+			</td>
+		</tr>
+
+		<tr>
+		 	<td align="left">
+		 		20 to 29 sliders
+			</td>
+		 	<td align="left">
+		 		1, 2 or 4 points
+			</td>
+		</tr>
+
+		<tr>
+		 	<td align="left">
+		 		10 to 19 sliders
+			</td>
+		 	<td align="left">
+		 		1 or 2 points
+			</td>
+		</tr>
+
+		<tr>
+		 	<td align="left">
+		 		0 to 9 sliders
+			</td>
+		 	<td align="left">
+		 		1 point
+			</td>
+		</tr>
+	</table>
+
+	</div>
+
+
+    {% next_button %}
+
+{% endblock %}

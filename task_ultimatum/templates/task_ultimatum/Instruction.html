@@ -1,0 +1,60 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+{% block content %}
+	
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading" align="center">Summary of this experiment.</div>
+
+		<!-- Table -->
+		<table class="table">
+		 <tr>
+		 	<td align="left">
+		 		This experiment involves many participants. Each participant is paired anonymously with another participant. You will have to make a decision and your partner will have to make a different decision.
+				<br>There is an allocation of 10 points to be divided between you and your paired participant. Points will be given to you based on your and your paired participant’s decisions.
+				<br>Your and your paired participant’s earnings could be zero. Hence, a showing fee of 3 euros will be given to you at any case. Conversion rate 1 points = 1 Euro
+		 	</td>		 	
+		 </tr>		 
+		</table>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading" align="center">Procedures.</div>
+		<table class="table">
+		 <tr>
+		 	<td align="left">
+		 		Main Instructions:
+		 		<ul>
+					<li>Randomly and anonymously you will be paired with another participant.
+					<li>10 points is intended for both of you.
+					<li>You could be the first mover (A) and your paired participant the second mover (B), or the opposite.
+				</ul>
+				Roles:
+				<ul>
+					<li>(A) decides how to divide the 10 points between (A) and (B)
+					<li>(B) decides whether to accept or reject (A)’s decision.
+					<li>In order to claim* more points for her/himself (B) has an option to exert effort. (Before (A) makes her/his decision)
+					<li>If (B) accepts (A)’s decision, both (A) and (B) will earn points according to (A)’s decision.
+					<li>If (B) rejects (A)’s decision, both (A) and (B) will get zero.
+					<li>(A) will be informed of (B)’s decision.
+				</ul>
+				<small>* The claim is not binding for (A), who can still choose any of the available options.</small>
+		 	</td>		 	
+		 </tr>		 
+		</table>
+	</div>
+	<div class="panel panel-default">
+	￼Note:
+	<br>If you fully understand the procedures above you can click now the button ‘next’ to be randomly assigned to one of the two roles (A) or (B). If you have any question, raise your hand before clicking ‘start’ button and the instructor will answer your question.
+	</div>
+
+
+	
+	
+	
+	<p>&nbsp;</p>	
+    {% next_button %}
+
+{% endblock %}

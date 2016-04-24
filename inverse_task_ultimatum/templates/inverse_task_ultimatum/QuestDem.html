@@ -1,0 +1,29 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+
+{% block content %}
+
+<!--
+Documentation on how to write a django template here:
+https://docs.djangoproject.com/en/dev/topics/templates/
+
+Bootstrap comes pre-loaded, so you can use any Bootstrap elements:
+http://getbootstrap.com/components/
+
+-->
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading" align="center"><strong>Please answer to these questions:</strong></div>
+		<div class="panel-body">
+			{% formfield player.eta with label="Age" %} 
+			{% formfield player.facolta with label="Faculty" %} 
+			{% formfield player.sex with label="Gender" %} 
+		</div>
+	</div>
+	
+	
+	{% next_button %}
+
+{% endblock %}
